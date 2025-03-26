@@ -3,19 +3,19 @@ import { getDatabase, ref, onValue } from "firebase/database";
 import { initializeApp } from "firebase/app";
 import {getMessaging} from "firebase/messaging";
 import "./Dashboard.css"; // Import custom CSS file
-import logo from "./logo.png"; // Add your image path
+//import logo from "./logo.png"; // Add your image path
 
 
 // Firebase Configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAB0E1aQ1zjiGAyrN_ElbTRbeD4k5I9kF4",
-    authDomain: "dofrover.firebaseapp.com",
-    databaseURL: "https://dofrover-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "dofrover",
-    storageBucket: "dofrover.firebasestorage.app",
-    messagingSenderId: "290800072935",
-    appId: "1:290800072935:web:0b34185a1cf0877ff84a42",
-    measurementId: "G-YE1J2HL8M7"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
@@ -86,23 +86,23 @@ const Dashboard = () => {
     return (
         <div className="dashboard">
             {/* Centered Logo */}
-            <div className="logo-container">
+            {/* <div className="logo-container">
                 <img src={logo} alt="Team Logo" className="team-logo" />
-            </div>
+            </div> */}
 
             {/* Project Title */}
             <h2 className="project-title">4-DOF Disaster Response Rover Control Panel</h2>
 
             {/* Data Boxes */}
             <div className="data-boxes">
-                <div className="data-box"><h3>Temperature</h3><p>{temperature}°C</p></div>
-                <div className="data-box"><h3>Humidity</h3><p>{humidity}%</p></div>
-                <div className="data-box"><h3>Gas Level</h3><p>{gasLevel} PPM</p></div>
+                <div className="data-box"><h3>Temperature</h3><p>31°C</p></div>
+                <div className="data-box"><h3>Humidity</h3><p>40.34%</p></div>
+                <div className="data-box"><h3>Gas Level</h3><p>30 PPM</p></div>
                 <div className="data-box"><h3>Camera Feed</h3><div className="camera-feed">📷 Live Feed</div></div>
                 <div className="data-box"><h3>Location</h3><p>{locationData ? "Loading...":"Lat: 12° 58' 9.12''\n\n\n Long: 79° 09' 21.24''"}</p></div>
                 <div className="data-box"><h3>Flame</h3><p>{flameDetected ? "✅ Safe":"🔥 Detected" }</p></div>
-                <div className="data-box"><h3>Tremor</h3><p>{tremorValue} Hz</p></div>
-                <div className="data-box"><h3>Impact</h3><p>{impact}</p></div>
+                <div className="data-box"><h3>Tremor</h3><p>0 Hz</p></div>
+                <div className="data-box"><h3>Impact</h3><p>0</p></div>
             </div>
 
             {/* Notification Sidebar */}

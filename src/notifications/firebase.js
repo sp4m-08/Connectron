@@ -19,7 +19,7 @@ const FirebaseApp = initializeApp(firebaseConfig);
 const database = getDatabase(FirebaseApp);
 const messaging = getMessaging(FirebaseApp);
 
-export const generateToken = async ()=>{
-    const permission = await Notification.requestPermission();
-    console.log("Permission")
-};
+// export const generateToken = async ()=>{
+//     const permission = await Notification.requestPermission();
+//     console.log("Permission")
+// };
