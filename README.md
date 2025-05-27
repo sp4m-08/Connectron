@@ -1,8 +1,37 @@
-# React + Vite
+# 🚨 4-DOF Disaster Rover Control Panel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time monitoring dashboard built using **ReactJS** to visualize and track vital sensor data from a disaster-response robot. It interfaces with **Firebase Realtime Database** to display live telemetry like gas levels, tremor activity, flame detection, and more.
 
-Currently, two official plugins are available:
+![Dashboard Screenshot](./assets/dashboard-preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 🌟 Features
+
+- 🌡️ Live **Temperature** & **Humidity** display
+- 💨 Real-time **Gas Level** monitoring
+- 🔥 **Flame Detection** indicator
+- 🌍 **Tremor Intensity** and **Impact** levels
+- 🛰️ Static **GPS Location** coordinates
+- 🎥 Camera feed placeholder for live video stream
+- 🔔 Notification panel with auto-alerts (based on thresholds)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: ReactJS, CSS
+- **Realtime Data**: Firebase Realtime Database
+- **Notifications**: Firebase Cloud Messaging (FCM) _(scaffolded but not activated - issues appearing on activation)_
+- **Live Reload**: Vite Dev Server (default port: `5173`)
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Clone this Repository
+
+```bash
+git clone https://github.com/your-username/4-dof-disaster-rover.git
+cd 4-dof-disaster-rover
+```
