@@ -2,9 +2,7 @@
 
 A real-time monitoring dashboard built using **ReactJS** to visualize and track vital sensor data from a disaster-response robot. It interfaces with **Firebase Realtime Database** to display live telemetry like gas levels, tremor activity, flame detection, and more.
 
-![alt text](image.png)
-
----
+## ![alt text](src/assets/dashboard-preview.png)
 
 ## 🌟 Features
 
