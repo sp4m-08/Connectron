@@ -33,3 +33,16 @@ A real-time monitoring dashboard built using **ReactJS** to visualize and track 
 git clone https://github.com/your-username/4-dof-disaster-rover.git
 cd 4-dof-disaster-rover
 ```
+
+### 2. Install Dependencies
+
+Make sure you have [Node.js](https://nodejs.org/) installed, then run:
+
+```bash
+npm install
+
+
+
+
+
+```
