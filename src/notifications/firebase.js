@@ -4,15 +4,15 @@ import {getMessaging} from "firebase/messaging";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAB0E1aQ1zjiGAyrN_ElbTRbeD4k5I9kF4",
-    authDomain: "dofrover.firebaseapp.com",
-    databaseURL: "https://dofrover-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "dofrover",
-    storageBucket: "dofrover.firebasestorage.app",
-    messagingSenderId: "290800072935",
-    appId: "1:290800072935:web:0b34185a1cf0877ff84a42",
-    measurementId: "G-YE1J2HL8M7"
-};
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+  };
 
 // Initialize Firebase
 const FirebaseApp = initializeApp(firebaseConfig);
