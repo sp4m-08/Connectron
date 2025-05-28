@@ -40,9 +40,12 @@ Make sure you have [Node.js](https://nodejs.org/) installed, then run:
 
 ```bash
 npm install
+```
 
+### 3. Run the program
 
-
-
+```bash
+cd 4DROVER
+npm run dev
 
 ```
